@@ -1,6 +1,6 @@
-import { createStore, actionCreator } from './redux.js';
+import { createStore } from './redux.js';
 import { reducer } from './reducer.js';
-import { INCREASE } from './action-type.js';
+import { increase } from './actions.js';
 
 const store = createStore(reducer);
 
@@ -8,5 +8,5 @@ store.subscribe(function () {
   console.log(store.getState());
 });
 
-store.dispath(actionCreator(INCREASE, 1));
-store.dispath(actionCreator(INCREASE));
+store.dispath(increase());
+store.dispath(increase());
