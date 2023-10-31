@@ -1,11 +1,9 @@
 // action 객체를 만들어주는 도구
-export function actionCreator(type, payload) {
+export const actionCreator = (type) => (payload) => ({
   // 데이터를 payload라고 하는 키에다 많이 넣음.
-  return {
-    type,
-    payload,
-  };
-}
+  type,
+  payload,
+});
 
 // 상태를 사용자가 바꾸는 함수 reducer
 export function createStore(reducer) {
